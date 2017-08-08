@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Alexey Glazkov](https://up.htmlacademy.ru/htmlcss/18/user/246435).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Смирнов](https://htmlacademy.ru/profile/id71777).
 
 ---
 
