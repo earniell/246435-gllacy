@@ -30,32 +30,13 @@
   			</li>
  			  <li class="login">
           <a href="">Вход</a> 
-  				<form class="modal modal-login" action="test.php" method="post">
-  					<p>
-              <label for="email">
-                <input type="text" id="email" name="email" value="" placeholder="Электронная почта">
-              </label> 
-            </p>
-  					<p>
-              <label for="password">
-                <input type="password" id="password" name="password" value="" placeholder="Пароль">
-              </label>
-  					</p>
-            <p>
-              <label for="submit">
-                <input type="submit" id="submit" name="submit" value="Войти">
-  					  </label>
-            </p>
-            <a href="#">Забыли пароль?</a>
-  					<a href="#">Новая регистрация</a>
-  				</form>
   			</li> 
         <li class="basket">
   			<a href="#">Пусто</a>	
   			</li>
   		</ul>
       
-      <ul class="main-menu__breadcrumbs-menu">
+      <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="creamy.html">Сливочное</a></li> 
@@ -95,25 +76,25 @@
       <article class="catalog-item ">
         <span class="hit"></span>
         <img src="img/creamy.png" width="267" height="267" alt="сливочное мороженое">
-        <p>310&#8381<span class="weight">/кг</span></p> 
+        <p>310 ₽<span class="weight">/кг</span></p> 
         <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p> 
       </article>
       <article class="catalog-item">
         <span class="hit"></span>
         <img src="img/creamy.png" width="267" height="267" alt="сливочное мороженое">
-        <p>380&#8381<span class="weight">/кг</span></p> 
+        <p>380 ₽<span class="weight">/кг</span></p> 
         <p>Сливочно-кофейное с кусочками шоколада</p> 
       </article>
       <article class="catalog-item">
         <span class="hit"></span>
         <img src="img/creamy.png" width="267" height="267" alt="сливочное мороженое">
-        <p>355&#8381<span class="weight">/кг</span></p> 
+        <p>355 ₽<span class="weight">/кг</span></p> 
         <p>Сливочно-клубничное с присыпкой из белого шоколада</p> 
       </article>
       <article class="catalog-item">
         <span class="hit"></span>
         <img src="img/creamy.png" width="267" height="267" alt="сливочное мороженое">
-        <p>415&#8381<span class="weight">/кг</span></p> 
+        <p>415 ₽<span class="weight">/кг</span></p> 
         <p>Сливочное крем-брюле с карамельной подливкой</p> 
       </article>
     </section>
@@ -165,26 +146,88 @@
     </section>
 
   	<section class="contacts">
+      
       <section class="map">
+      <img src="img/map.html" width="1200" height="429" alt="карта с адресом магазина ул. Большая Конюшенная 19/8">
       <span class="pin"></span>
       </section>
+      
       <article class="feedback">
-      <p>Адрес главного офиса<br>
-      и офлайн магазина:<br>
-      <b>ул. Большая Конюшенная<br> 
-      19/8, Санкт-Петербург</b></p> 
+        <p>Адрес главного офиса<br>
+        и офлайн магазина:<br>
+        <b>ул. Большая Конюшенная<br> 
+        19/8, Санкт-Петербург</b></p> 
 
-      <p>Для заказов по телефону:<br>
-      <b>8 812 450-25-25</b><br>
-      (с 10 до 20 ежедневно)</p>
-      <a class="btn" href="#">Форма обратной связи</a>
-      <form class="modal modal-feedback" action="test.php" method="post">
-        <p><b>Мы обязательно вам ответим!</b></p>
-        <p>
-          <label for="name">
-            <input id="name" type="text" name="name" value="" placeholder="Как вас зовут?"> 
-          </label>
-        </p>
+        <p>Для заказов по телефону:<br>
+          <b>8 812 450-25-25</b><br>
+          (с 10 до 20 ежедневно)</p>
+        <a class="btn" href="#">Форма обратной связи</a>
+      </article>
+
+    </section>
+</main>
+  	
+<footer class="page-footer">
+    <div class="footer-social">
+        <ul>
+          <li><a class="social-button button-tw" href="#">Твиттер</a></li>
+          <li><a class="social-button button-inst" href="#">Инстаграм</a></li>
+          <li><a class="social-button button-fb" href="#">Фейсбук</a></li>
+          <li><a class="social-button button-vk" href="#">Вконтакте</a></li>
+        </ul>
+    </div>
+    <div class="service-info">
+      <p>  
+        <a href="#">Для поставщиков</a>
+        <a href="#">О производстве</a>
+      </p>
+      <p> 
+        <a href="#">Наши документы</a>
+        <a href="#">Экологические стандарты</a>
+      </p>
+    </div>
+    <div class="footer-copyright">
+      <p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/logo-htmlacademy-small.jpg" width="108" height="39" alt="логотип htmlacademy">
+        </a>
+      </p>
+      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017 </p>
+    </div>   
+</footer>
+
+    <section class="modal modal-login">
+        <h2 class="visually-hidden">Личный кабинет</h2>
+          <form class="login-form" action="test.php" method="post">
+            <p>
+              <label for="email">
+                <input type="text" id="email" name="email" value="" placeholder="Электронная почта">
+              </label> 
+            </p>
+            <p>
+              <label for="password">
+                <input type="password" id="password" name="password" value="" placeholder="Пароль">
+              </label>
+            </p>
+            <p>
+              <label for="submit">
+                <input type="submit" id="submit" name="submit" value="Войти">
+              </label>
+            </p>
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </form>
+    </section>
+
+  
+    <section class="modal modal-feedback">
+          <form class="feedback-form" action="test.php" method="post">
+            <p><b>Мы обязательно вам ответим!</b></p>
+            <p>
+              <label for="name">
+               <input id="name" type="text" name="name" value="" placeholder="Как вас зовут?"> 
+              </label>
+            </p>
         <p>
           <label for="feedback-email">
             <input id="feedback-email" type="email" name="feedback-email" value="" placeholder="Ваша почта для ответа?"> 
@@ -201,13 +244,7 @@
           </label>
         </p>  
       </form>
-       </article>
     </section>
-
-  	<footer class="page-footer"></footer>
-  </main>
-
-    
 
   </body>
 </html>
