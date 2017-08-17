@@ -23,9 +23,9 @@
   			<li><a href="#">О Компании</a></li>
   		</ul>
   		<ul class="user-nav">
-  			<li class="search"><a class="search"></a></li>
- 			  <li class="login"><a href="">Вход</a></li> 
-        <li class="basket"><a href="#">Пусто</a></li>
+  			<li class="search"><button>Поиск</button></li>
+ 			  <li class="login"><button>Вход</button></li> 
+        <li class="basket"><button>Пусто</button></li>
   		</ul>
       <p>с 10 до 20, ежедневно</p>
   		<b>8 812 450-25-25</b>
@@ -34,6 +34,7 @@
 
   <main class="conteiner">
   	<section class="slider">
+      <h2 class="visually-hidden">Слайдер</h2>
   		<ul>
   		  <li class="slider-image-01">
         <img src="img/slider_01.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
@@ -54,6 +55,7 @@
     </section>
 
   	<section class="promotion">
+      <h2 class="visually-hidden">Акции</h2>
       <article class="left-promo">
         <h2>Малинка даром!</h2>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -68,9 +70,10 @@
 
 
   <section class="popular-items">
+    <h2 class="visually-hidden">Популярные товары</h2>
     <ul>
       <li class="catalog-item">
-        <span class="hit-icon"></span>
+        <span class="hit-icon">хит</span>
         <img src="img/item_001.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
         <span class="price">310 ₽</span>
         <span class="weight">/кг</span> 
@@ -79,7 +82,7 @@
         </p>
       </li>
       <li class="catalog-item">
-        <span class="hit-icon"></span>
+        <span class="hit-icon">хит</span>
         <img src="img/item_002.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
         <span class="price">380 ₽</span>
         <span class="weight">/кг</span> 
@@ -88,7 +91,7 @@
         </p>
       </li>  
       <li class="catalog-item">
-        <span class="hit-icon"></span>
+        <span class="hit-icon">хит</span>
         <img src="img/item_003.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
         <span class="price">355 ₽</span>
         <span class="weight">/кг</span> 
@@ -97,7 +100,7 @@
         </p>
       </li>
       <li class="catalog-item">
-        <span class="hit-icon"></span>
+        <span class="hit-icon">хит</span>
         <img src="img/item_004.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
         <span class="price">415 ₽</span>
         <span class="weight">/кг</span> 
@@ -109,6 +112,7 @@
   </section>
 
   	<section class="seo"> 
+      <h2 class="visually-hidden">Наши преимущества</h2>
       <p class="seo-lead">
         Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
       </p>
@@ -129,6 +133,7 @@
     </section>
  	 
     <article class="news">
+      <h2 class="visually-hidden">Блог</h2>
       <span>Новое в нашем блоге</span>
       <p>
         <a href="#">10 способов сервировки фруктовых щербетов к столу </a>
@@ -136,19 +141,23 @@
     </article>
       
     <article class="subscribe">
+      <h2 class="visually-hidden">Подписка</h2>
       <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
       </p>
       <form class="subscribe" action="test.php" method="post">
       <p>
-        <input type="email" name="subscription" value="" placeholder="Электронная почта">
+        <label class="visually-hidden" for="subscription">Электронная почта</label>
+        <input id="subscription" type="email" name="subscription" value="" placeholder="Электронная почта">
       </p>
       <p>
-        <input class="btn" type="submit" name="submit" value="Отправить">
+        <label class="visually-hidden" for="submit">Электронная почта</label>
+        <input class="btn" id="submit" type="submit" name="submit" value="Отправить">
       </p>
      </form> 
     </article>
     
     <section class="contacts">
+      <h2 class="visually-hidden">Контакты и карта</h2>
       <section class="map">
         <img src="img/map.png" width="1200" height="429" alt="карта с адресом магазина ул. Большая Конюшенная 19/8">
       </section>
@@ -161,29 +170,32 @@
         <p>Для заказов по телефону:<br>
         <b>8 812 450-25-25</b><br>
         (с 10 до 20 ежедневно)</p>
-        <a class="btn" href="#">Форма обратной связи</a>
+        <button class="btn">Форма обратной связи</button>
       </article>
     </section>
 </main>
   	
 <footer class="page-footer">
-  <div class="footer-social">
+  <section class="footer-social">
+    <h2 class="visually-hidden">Мы в соц. сетях</h2>
     <ul>
       <li><a class="social-button button-tw" href="#">Твиттер</a></li>
       <li><a class="social-button button-inst" href="#">Инстаграм</a></li>
       <li><a class="social-button button-fb" href="#">Фейсбук</a></li>
       <li><a class="social-button button-vk" href="#">Вконтакте</a></li>
     </ul>
-  </div>
-  <div class="service-info">
+  </section>
+  <section class="service-info">
+    <h2 class="visually-hidden">Служебная информация</h2>
     <ul>  
       <li><a href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>
     </ul>
-  </div>
-  <div class="footer-copyright">
+  </section>
+  <section class="footer-copyright">
+    <h2 class="visually-hidden">Разработка</h2>
     <a href="https://htmlacademy.ru/intensive/htmlcss">
       <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="логотип htmlacademy">
     </a>
@@ -194,7 +206,8 @@
     <section class="modal modal-search">
       <h2 class="visually-hidden">Поиск</h2>  
       <form class="search-form" action="test.php" method="post">
-        <input type="search" name="search" placeholder="Что ищем?">
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input id="search" type="search" name="search" placeholder="Что ищем?">
       </form>
     </section>
 
@@ -202,13 +215,15 @@
       <h2 class="visually-hidden">Личный кабинет</h2>
       <form class="login-form" action="test.php" method="post">
         <p>
-          <input type="text" name="email" placeholder="Электронная почта" required>
+          <label class="visually-hidden" for="login-email">Электронная почта</label>
+          <input id="login-email" type="text" name="email" placeholder="Электронная почта" required>
         </p>
         <p>
-          <input type="password" name="password" placeholder="Пароль">
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <input id="login-password" type="password" name="password" placeholder="Пароль">
         </p>
         <p>
-          <input class="btn" type="submit" name="submit" value="Войти">
+          <button class="btn" type="submit">Войти</button>
         </p>
         <ul class="restore">
           <li><a href="#">Забыли пароль?</a></li>
@@ -221,17 +236,20 @@
       <h2 class="visually-hidden">Обратная связь</h2>
       <form class="feedback-form" action="test.php" method="post">
         <p><b>Мы обязательно вам ответим!</b></p>
-        <p>             
-          <input type="text" name="name" placeholder="Как вас зовут?" required> 
+        <p>
+          <label class="visually-hidden" for="feedback-name">Имя</label>             
+          <input id="feedback-name" type="text" name="name" placeholder="Как вас зовут?" required> 
         </p>
         <p>
-          <input type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required> 
+          <label class="visually-hidden" for="feedback-email">Электронная почта</label>
+          <input id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required> 
         </p>
         <p>
-          <textarea name="message" rows="10" cols="35" placeholder="Напишите что-нибудь..." required></textarea>    
+          <label class="visually-hidden" for="message">Отзыв</label>
+          <textarea id="message" name="message" rows="10" cols="35" placeholder="Напишите что-нибудь..." required></textarea>    
         </p>
         <p>
-          <input class="btn" type="submit" name="feedback-submit" value="Отправить">
+          <button class="btn">Отправить</button>
         </p>  
       </form>
     </section>
