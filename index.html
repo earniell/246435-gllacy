@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" >
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -11,7 +13,7 @@
   		<img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного Глейси">
   		<ul class="main-menu">
   			<li><a href="catalog.html">Каталог</a>
-  			  <ul>
+  			  <ul class="sub-menu">
   					<li><a href="#">Новинки</a></li>
   					<li><a href="creamy.html">Сливочное</a></li>
   					<li><a href="#">Щербеты</a></li>
@@ -31,22 +33,21 @@
   		<b>8 812 450-25-25</b>
   	</nav>
   </header>
-
   <main class="conteiner">
   	<section class="slider">
       <h2 class="visually-hidden">Слайдер</h2>
   		<ul>
-  		  <li class="slider-image-01">
+  		  <li class="slider-image">
         <img src="img/slider_01.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
           <p>Крем-брюле и пломбир с малиновым джемом</p>
           <a class="btn" href="#">Давайте оба!</a>
         </li>
-        <li class="slider-image-02">
+        <li class="slider-image">
           <img src="img/slider_02.png" width="647" height="584" alt="Шоколадный пломбир и лимонный сорбет">
           <p>Шоколадный пломбир и лимонный сорбет</p>
           <a class="btn" href="#">Давайте оба!</a>
         </li>	
-        <li class="slider-image-03">
+        <li class="slider-image">
           <img src="img/slider_03.png" width="647" height="584" alt="Пломбир с помадкой и клубничный щербет">
           <p>Пломбир с помадкой и клубничный щербет</p>
           <a class="btn" href="#">Давайте оба!</a>
@@ -57,7 +58,6 @@
         <li><button>2 слайд</button></li>
         <li><button>3 слайд</button></li>
     </section>
-
   	<section class="promotion">
       <h2 class="visually-hidden">Акции</h2>
       <article class="left-promo">
@@ -71,50 +71,47 @@
         <a class="btn" href="#">Хочу варенье!</a>
       </article>
     </section>
-
-
-  <section class="popular-items">
-    <h2 class="visually-hidden">Популярные товары</h2>
-    <ul>
-      <li class="catalog-item">
-        <span class="hit-icon">хит</span>
-        <img src="img/item_001.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-        <span class="price">310 ₽</span>
-        <span class="weight">/кг</span> 
-        <p>
-          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-        </p>
-      </li>
-      <li class="catalog-item">
-        <span class="hit-icon">хит</span>
-        <img src="img/item_002.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-        <span class="price">380 ₽</span>
-        <span class="weight">/кг</span> 
-        <p>
-          <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-        </p>
-      </li>  
-      <li class="catalog-item">
-        <span class="hit-icon">хит</span>
-        <img src="img/item_003.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-        <span class="price">355 ₽</span>
-        <span class="weight">/кг</span> 
-        <p>
-          <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-        </p>
-      </li>
-      <li class="catalog-item">
-        <span class="hit-icon">хит</span>
-        <img src="img/item_004.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-        <span class="price">415 ₽</span>
-        <span class="weight">/кг</span> 
-        <p>
-          <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-        </p>
-      </li>
-    </ul> 
-  </section>
-
+    <section class="popular-items">
+      <h2 class="visually-hidden">Популярные товары</h2>
+      <ul>
+        <li class="catalog-item">
+          <span class="hit-icon">хит</span>
+          <img src="img/item_001.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          <span class="price">310 ₽</span>
+          <span class="weight">/кг</span> 
+          <p>
+            <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <span class="hit-icon">хит</span>
+          <img src="img/item_002.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+          <span class="price">380 ₽</span>
+          <span class="weight">/кг</span> 
+          <p>
+            <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+          </p>
+        </li>  
+        <li class="catalog-item">
+          <span class="hit-icon">хит</span>
+          <img src="img/item_003.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+          <span class="price">355 ₽</span>
+          <span class="weight">/кг</span> 
+          <p>
+            <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <span class="hit-icon">хит</span>
+          <img src="img/item_004.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+          <span class="price">415 ₽</span>
+          <span class="weight">/кг</span> 
+          <p>
+            <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+          </p>
+        </li>
+      </ul> 
+    </section>
   	<section class="seo"> 
       <h2 class="visually-hidden">Наши преимущества</h2>
       <p class="seo-lead">
@@ -135,7 +132,6 @@
         </li>
       </ul>
     </section>
- 	 
     <article class="news">
       <h2 class="visually-hidden">Блог</h2>
       <span>Новое в нашем блоге</span>
@@ -143,7 +139,6 @@
         <a href="#">10 способов сервировки фруктовых щербетов к столу </a>
       </p>
     </article>
-      
     <article class="subscribe">
       <h2 class="visually-hidden">Подписка</h2>
       <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
@@ -159,7 +154,6 @@
       </p>
      </form> 
     </article>
-    
     <section class="contacts">
       <h2 class="visually-hidden">Контакты и карта</h2>
       <section class="map">
@@ -170,7 +164,6 @@
         и офлайн магазина:<br>
         <b>ул. Большая Конюшенная<br> 
         19/8, Санкт-Петербург</b></p> 
-
         <p>Для заказов по телефону:<br>
         <b>8 812 450-25-25</b><br>
         (с 10 до 20 ежедневно)</p>
@@ -178,7 +171,6 @@
       </article>
     </section>
 </main>
-  	
 <footer class="page-footer">
   <section class="footer-social">
     <h2 class="visually-hidden">Мы в соц. сетях</h2>
@@ -206,7 +198,6 @@
     <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017 </p>
   </div>   
 </footer>
-    
     <section class="modal modal-search">
       <h2 class="visually-hidden">Поиск</h2>  
       <form class="search-form" action="test.php" method="post">

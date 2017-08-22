@@ -1,3 +1,49 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"), 
+  url("../fonts/robotomedium.woff2"), url("../fonts/robotomedium.woff"),
+  url(https://fonts.gstatic.com/s/roboto/v16/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+  url("../fonts/roboto.woff2"), url("../fonts/roboto.woff")
+  url(https://fonts.gstatic.com/s/roboto/v16/oHi30kwQWvpCWqAhzHcCSBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"), 
+  url("../fonts/robotobold.woff2"), url("../fonts/robotobold.woff"),
+  url(https://fonts.gstatic.com/s/roboto/v16/isZ-wbCXNKAbnjo6_TwHThJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	min-width: 900px;
+	max-width: 1200px;
+  padding-left: 22px;
+  padding-right: 21px;
+  font-family: "Roboto", "Arial", sans-serif;
+  background: rgb(132, 157, 143);
+  color: white;
+}
+
+
 .visually-hidden { 
   position: absolute; 
   margin: -1px; 
@@ -8,3 +54,257 @@
   overflow: hidden; 
   clip: rect(0 0 0 0); 
 }
+
+/* header */
+
+.main-nav {
+  
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.main-nav li {
+  list-style: none;
+}
+
+
+.main-menu {
+  position: relative;
+  padding: 0;
+}
+
+.main-menu a {
+  color: white;
+}
+
+.sub-menu {
+  padding: 0;
+  border-radius: 5px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 184px;
+  top: 60px;
+ /*
+  width: 143px;
+  height: 171px;
+*/
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+
+.sub-menu a {
+  display: block;
+  color: rgb(50, 50, 50);
+  text-decoration: none;
+}
+
+.user-nav {
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  
+}
+
+.user-nav a {
+  color: white;
+  text-decoration: none;
+
+}
+
+/*
+.slider-image .btn {
+	font-size: 32px;
+	line-height: 44px;
+}*/
+
+
+/*  promotion  */
+
+.promotion {
+  display: flex;
+  color: white;
+  margin-bottom: 37px;
+}
+
+.promotion h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
+.promotion p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  
+}
+
+.left-promo {
+  width: 519px;
+  height: 184px;
+  border-radius: 15px;
+  margin-right: 26px;
+  padding: 23px 21px 21px 20px;
+  background-image: url("../img/raspberry.jpg");
+}
+
+.right-promo {
+  width: 519px;
+  height: 184px;
+  border-radius: 15px;
+  padding: 23px 21px 21px 20px;
+  background-image: url("../img/chokolate.jpg");
+}
+
+.btn { 
+  display: block;
+  width: 165px;
+  height: 36px;
+  
+  border-radius: 40px;
+  background-image: linear-gradient(to top, rgb(231, 74, 53), rgb(242, 104,67));
+  color: white;
+  text-decoration: none;
+  
+  text-align: center;
+  padding-top: 11px;
+
+  font: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.btn:hover {
+  background-image: rgba(255, 255, 255, 0.2);
+} 
+
+
+/* popular-items */
+
+.popular-items {
+	margin-bottom: 34px;
+}
+
+.popular-items ul {
+	display: flex;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0;
+}
+
+.catalog-item {
+	width: 267px;
+	height: 330px;
+	margin-left: 0;
+	margin-right: 26px;
+	
+
+	list-style: none;
+	text-align: center;
+
+}
+
+.catalog-item:last-child {
+	margin-right: 0;
+}
+
+
+/*  seo  */
+
+.seo {
+  color: rgb(50, 50, 50);
+  width: 1146px;
+  height: 305px;
+  padding: 25px 25px 25px 20px;
+  border-radius: 15px;
+  background-image: url("../img/wafer.jpg");
+}
+
+.seo-lead {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 0;
+
+
+}
+
+.seo-items {
+  display: flex;
+  list-style: none;
+}
+
+
+
+/* news*/
+
+.news {
+	color: black;
+	width: 560px;
+	height: 220px;
+	border-radius: 15px;
+	background-image: url("../img/strawberry.jpg");
+}
+
+
+/* contacts */
+
+.contacts {
+	margin-left: -22px;
+}
+
+
+
+/* footer */
+
+.footer-social li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 14px;
+
+    
+}
+
+.social-button {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(230, 235, 233, 1);
+    border: 3px solid rgba(194, 206, 199, 1);
+    border-radius: 50%;
+    font-size: 0px;
+    background-image: url(img/twitter.svg);
+}
+
+.social-button:hover {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(218, 226, 222, 1)
+}
+
+.social-button:active {
+    background-color: rgba(233, 233, 233, 1);
+    border-color: rgba(218, 226, 222, 1)
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
