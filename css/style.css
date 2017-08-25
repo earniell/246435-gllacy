@@ -1,32 +1,3 @@
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto"), local("Roboto-Regular"), 
-  url("../fonts/robotomedium.woff2"), url("../fonts/robotomedium.woff"),
-  url(https://fonts.gstatic.com/s/roboto/v16/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Medium"), local("Roboto-Medium"),
-  url("../fonts/roboto.woff2"), url("../fonts/roboto.woff")
-  url(https://fonts.gstatic.com/s/roboto/v16/oHi30kwQWvpCWqAhzHcCSBJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Bold"), local("Roboto-Bold"), 
-  url("../fonts/robotobold.woff2"), url("../fonts/robotobold.woff"),
-  url(https://fonts.gstatic.com/s/roboto/v16/isZ-wbCXNKAbnjo6_TwHThJtnKITppOI_IvcXXDNrsc.woff2) format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-
-
 html,
 body {
     margin: 0;
@@ -36,13 +7,16 @@ body {
 body {
 	min-width: 900px;
 	max-width: 1200px;
-  padding-left: 22px;
-  padding-right: 21px;
   font-family: "Roboto", "Arial", sans-serif;
   background: rgb(132, 157, 143);
   color: white;
 }
 
+.container,
+.page-footer {
+  padding-left: 22px;
+  padding-right: 22px;
+}
 
 .visually-hidden { 
   position: absolute; 
@@ -80,28 +54,65 @@ body {
 
 .sub-menu {
   padding: 0;
+  padding-top: 4px;
+  padding-bottom: 5px;
   border-radius: 5px;
   background-color: rgb(248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   position: absolute;
+  
   left: 184px;
   top: 60px;
- /*
-  width: 143px;
-  height: 171px;
-*/
+  
+  min-width: 143px;
+  
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
 }
 
+.sub-menu li {
+  text-align: left;
+  margin-bottom: 3px;
 
-.sub-menu a {
-  display: block;
-  color: rgb(50, 50, 50);
-  text-decoration: none;
 }
 
+.sub-menu a {
+  font: inherit;
+  display: block;
+  padding-left: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: rgb(50, 50, 50);
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.sub-menu .hits a {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  border-bottom: solid 1px rgb(202, 208, 206);  /*  посоветоваться!!! */
+}
+
+
+
+.sub-menu a:hover,
+.sub-menu a:focus  {
+  background-color: rgb(251, 222, 215);
+}
+
+
+.sub-menu a:active {
+  background-color: rgb(246, 181, 165);
+}
+
+/*
+.sub-menu a {
+  background-color: rgb(208, 112, 88);
+}
+*/
 .user-nav {
   padding: 0;
   font-size: 14px;
@@ -115,6 +126,25 @@ body {
   text-decoration: none;
 
 }
+
+.modal-search {
+  width: 300px;
+}
+
+.search-form p {
+  padding: 20px 15px;
+}
+
+.search-form input[type="search"] {
+  width: 309px;
+  height: 42px;
+  padding-left: 14px;
+  border: solid 1px rgb(211, 211, 210);
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
 
 /*
 .slider-image .btn {
@@ -164,19 +194,13 @@ body {
 }
 
 .btn { 
-  display: block;
-  width: 165px;
-  height: 36px;
-  
+  font: inherit;
   border-radius: 40px;
   background-image: linear-gradient(to top, rgb(231, 74, 53), rgb(242, 104,67));
   color: white;
   text-decoration: none;
-  
   text-align: center;
-  padding-top: 11px;
-
-  font: inherit;
+  vertical-align: middle;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -184,10 +208,15 @@ body {
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
-.btn:hover {
-  background-image: rgba(255, 255, 255, 0.2);
+.btn:hover,
+.btn:focus {
+  background-image: linear-gradient(to top, rgb(236, 111, 94), rgb(245, 134, 105));
 } 
 
+.btn:active {
+  background-image: linear-gradient(to top, rgb(242,104,67), rgb(231,74,53));
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
 
 /* popular-items */
 
@@ -207,12 +236,10 @@ body {
 	height: 330px;
 	margin-left: 0;
 	margin-right: 26px;
-	
-
 	list-style: none;
 	text-align: center;
-
 }
+
 
 .catalog-item:last-child {
 	margin-right: 0;
@@ -235,15 +262,12 @@ body {
   line-height: 30px;
   font-weight: bold;
   margin: 0;
-
-
 }
 
 .seo-items {
   display: flex;
   list-style: none;
 }
-
 
 
 /* news*/
@@ -260,9 +284,8 @@ body {
 /* contacts */
 
 .contacts {
-	margin-left: -22px;
+	
 }
-
 
 
 /* footer */
@@ -271,8 +294,6 @@ body {
     display: inline-block;
     list-style: none;
     margin-right: 14px;
-
-    
 }
 
 .social-button {
@@ -298,10 +319,16 @@ body {
 
 
 
+/* modal */
 
 
 
-
+.modal {
+  border-radius: 6px;
+  background-color: rgb(248, 247, 244);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+ 
+}
 
 
 
