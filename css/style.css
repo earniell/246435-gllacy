@@ -5,17 +5,20 @@ body {
 }
 
 body {
-	min-width: 900px;
 	max-width: 1200px;
+  margin: 0 auto;
   font-family: "Roboto", "Arial", sans-serif;
   background: rgb(132, 157, 143);
   color: white;
+  padding-top: 10px;
 }
 
+
+.page-header, 
 .container,
 .page-footer {
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 27px;
+  padding-right: 27px;
 }
 
 .visually-hidden { 
@@ -32,10 +35,26 @@ body {
 /* header */
 
 .main-nav {
-  
+  display: flex;
+  justify-content: space-between;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
+}
+
+.wrapper-main-menu {
+  display: flex;
+  
+}
+
+.wrapper-user-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.logo {
+  margin-right: 15px;
 }
 
 .main-nav li {
@@ -44,8 +63,21 @@ body {
 
 
 .main-menu {
+  display: flex;
+  justify-content: space-between;
   position: relative;
   padding: 0;
+}
+
+.main-menu li {
+  margin-right: 15px;
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
+.main-menu > li:hover .sub-menu,
+.main-menu > li:focus .sub-menu {  /*??? tab не переходит на подменю*/
+  display: block;
 }
 
 .main-menu a {
@@ -53,16 +85,20 @@ body {
 }
 
 .sub-menu {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  
   padding: 0;
   padding-top: 4px;
   padding-bottom: 5px;
   border-radius: 5px;
   background-color: rgb(248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-  position: absolute;
   
-  left: 184px;
-  top: 60px;
+  position: absolute;
+  left: -10px;
+  top: 20px;
   
   min-width: 143px;
   
@@ -72,24 +108,35 @@ body {
 }
 
 .sub-menu li {
+  padding: 0;
+  margin: 0;
+  padding-left: 6px;
+  padding-right: 9px;
   text-align: left;
-  margin-bottom: 3px;
-
 }
 
 .sub-menu a {
   font: inherit;
   display: block;
-  padding-left: 20px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-left: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   color: rgb(50, 50, 50);
   text-decoration: none;
   vertical-align: middle;
 }
 
-.sub-menu .hits a {
+.hits {
+
+}
+
+.hits a {
   display: block;
+  
+  padding-left: 14px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
@@ -98,13 +145,14 @@ body {
 
 
 
-.sub-menu a:hover,
-.sub-menu a:focus  {
+.sub-menu > li:hover,
+.sub-menu > li:focus  {
+
   background-color: rgb(251, 222, 215);
 }
 
 
-.sub-menu a:active {
+.sub-menu > li:active {
   background-color: rgb(246, 181, 165);
 }
 
@@ -114,17 +162,81 @@ body {
 }
 */
 .user-nav {
+  display: flex;
   padding: 0;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  margin-bottom: 18px;
   
 }
+
+.user-nav li {
+  margin-right: 10px;
+  
+}
+
+.user-nav li:last-child {
+  margin-right: 0;
+}
+
+.wrapper-user-menu p {
+  align-self: flex-end;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.wrapper-user-menu b {
+  align-self: flex-end;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
 
 .user-nav a {
   color: white;
   text-decoration: none;
 
+}
+
+.user-nav > li:hover,
+.user-nav > li:focus {
+  background-color: white;
+}
+
+.user-nav > li:hover a,
+.user-nav > li:focus a {
+  color: black;
+}
+
+.user-nav > li:hover .loupe-fill,
+.user-nav > li:focus .loupe-fill,
+.user-nav > li:hover .enter-fill,
+.user-nav > li:focus .enter-fill,
+.user-nav > li:hover .basket-fill,
+.user-nav > li:focus .basket-fill {
+  fill: black;
+}
+
+.search {
+  position: relative;
+  font-size: 0;  /*  !!!!  ссылка не работает при нуле*/
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.loupe-icon {
+  position: absolute;
+  top: 7px;
+  right: 7px;
 }
 
 .modal-search {
@@ -146,6 +258,42 @@ body {
 }
 
 
+.login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  width: 77px;
+  height: 32px;
+  padding-right: 15px;
+}
+
+.login a,
+.basket a {
+  margin-left: 8px;
+}
+
+.basket {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  width: 82px;
+  height: 32px;
+  padding-right: 34px;
+}
+
+.user-nav p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+
 /*
 .slider-image .btn {
 	font-size: 32px;
@@ -157,6 +305,7 @@ body {
 
 .promotion {
   display: flex;
+  justify-content: space-between;
   color: white;
   margin-bottom: 37px;
 }
@@ -164,32 +313,39 @@ body {
 .promotion h2 {
   margin: 0;
   padding: 0;
+  margin-bottom: 19px;
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
 }
 
 .promotion p {
+  margin: 0;
+  margin-bottom: 37px;
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
   
 }
 
-.left-promo {
+.left-promo {         /* доп класс .promo-block для стиле блока промо???*/
+  display: flex;
+  flex-direction: column;
   width: 519px;
-  height: 184px;
+  
   border-radius: 15px;
-  margin-right: 26px;
-  padding: 23px 21px 21px 20px;
+  padding: 23px 21px 20px 20px;
   background-image: url("../img/raspberry.jpg");
 }
 
-.right-promo {
+.right-promo {        /* доп класс .promo-block для стиле блока промо???*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 519px;
   height: 184px;
   border-radius: 15px;
-  padding: 23px 21px 21px 20px;
+  padding: 23px 21px 20px 20px;
   background-image: url("../img/chokolate.jpg");
 }
 
@@ -218,6 +374,11 @@ body {
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
 }
 
+.btn-promo {
+  align-self: flex-end;
+  padding: 10px 22px;
+}
+
 /* popular-items */
 
 .popular-items {
@@ -226,18 +387,20 @@ body {
 
 .popular-items ul {
 	display: flex;
-	align-items: flex-start;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 }
 
 .catalog-item {
+  position: relative;
 	width: 267px;
 	height: 330px;
 	margin-left: 0;
-	margin-right: 26px;
+	
 	list-style: none;
 	text-align: center;
+  cursor: pointer;
 }
 
 
@@ -246,27 +409,100 @@ body {
 }
 
 
+.price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  color: white;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  
+}
+
+.weight {
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  color: white;
+  position: absolute;
+  top: 204px;
+  left: 120px;
+  
+}
+
+.hit-icon {
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  background-image: url("../img/hit-icon.svg");
+  font-size: 8px;
+}
+
+.catalog-item img {
+  margin-bottom: 14px;
+}
+
+.catalog-item p {
+  margin: 0;
+}
+
+.catalog-item a {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: white;
+}
+
+
 /*  seo  */
 
 .seo {
   color: rgb(50, 50, 50);
-  width: 1146px;
-  height: 305px;
   padding: 25px 25px 25px 20px;
   border-radius: 15px;
   background-image: url("../img/wafer.jpg");
 }
 
-.seo-lead {
+.seo p {
+  margin: 0;
+}
+
+.seo li {
+  margin-left: 75px;
+  list-style: none;
+
+}
+
+.seo .seo-lead {
   font-size: 24px;
   line-height: 30px;
-  font-weight: bold;
-  margin: 0;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
 .seo-items {
   display: flex;
-  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.seo-ice-cream {
+  
+}
+
+.seo-leaf {
+
+}
+
+.seo-cow {
+
+}
+
+.seo-termo {
+
 }
 
 
@@ -327,7 +563,7 @@ body {
   border-radius: 6px;
   background-color: rgb(248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
- 
+  display: none;
 }
 
 
@@ -335,3 +571,17 @@ body {
 
 
 
+
+._310_____кг {
+  font-size: 45px;
+  font-family: "Roboto";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  position: absolute;
+  left: 24.5px;
+  top: 1167.504px;
+  z-index: 150;
+}
