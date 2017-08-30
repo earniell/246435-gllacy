@@ -79,6 +79,7 @@ img {
   position: relative;
   padding: 0;
   margin: 0;
+  margin-top: 20px;
 }
 
 .main-menu li {
@@ -174,6 +175,8 @@ img {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  margin: 0;
+  margin-top: 15px;
   margin-bottom: 18px;
   
 }
@@ -205,6 +208,46 @@ img {
   font-weight: 700;
 }
 
+.login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  width: 77px;
+  height: 32px;
+  padding-right: 15px;
+}
+
+.login a,
+.basket a {
+  display: flex;
+}
+
+.login span,
+.basket span {
+  margin-left: 8px;
+  align-self: center;
+}
+
+.basket {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  width: 82px;
+  height: 32px;
+  padding-right: 34px;
+}
+
+.user-nav p {
+  margin: 0;
+  margin-bottom: 10px;
+}
 
 .user-nav a {
   color: white;
@@ -263,40 +306,7 @@ img {
 }
 
 
-.login {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  width: 77px;
-  height: 32px;
-  padding-right: 15px;
-}
 
-.login a,
-.basket a {
-  margin-left: 8px;
-}
-
-.basket {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  width: 82px;
-  height: 32px;
-  padding-right: 34px;
-}
-
-.user-nav p {
-  margin: 0;
-  margin-bottom: 10px;
-}
 
 
 /*
