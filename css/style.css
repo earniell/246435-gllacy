@@ -13,9 +13,9 @@ body {
 
 .site-wrapper {
   max-width: 1200px;
-  background-color: rgb(132, 157, 143);
-  background-image: radial-gradient(circle at 600px 270px, 
-                    rgb(206, 245, 224) 0%,  rgb(132, 157, 143) 15%);
+ /* background-color: rgb(132, 157, 143);   /* перекрывает почтовый фон*/
+ /* background-image: radial-gradient(circle at 600px 270px,  
+                    rgb(206, 245, 224) 0%,  rgb(132, 157, 143) 15%); /* перекрывает почтовый фон*/
   margin: 0 auto;
   
 }
@@ -41,6 +41,14 @@ body {
   border: 0;
   overflow: hidden; 
   clip: rect(0 0 0 0); 
+}
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* header */
@@ -104,6 +112,15 @@ body {
   list-style: none;
 }
 
+.main-menu-current {
+  background-color: rgb(208, 112, 88);
+  border-radius: 15px;
+}
+
+.main-menu-current a {
+  text-decoration: none;
+}
+
 .main-menu a {
   display: block;
   color: white;
@@ -113,12 +130,12 @@ body {
   text-underline-position: under; 
 }
 
-.main-menu > li {
+.main-menu li {
   position: relative;
   margin-right: 15px;
 }
 
-.main-menu > li::after {
+.main-menu li::after {
     content: "";
     position: absolute;
     width: 85px;
@@ -165,6 +182,7 @@ body {
   min-height: 170px;
   list-style: none;
   padding: 0;
+  overflow: hidden;
   
   border-radius: 5px;
   background-color: rgb(248, 247, 244);
@@ -183,20 +201,13 @@ body {
   text-align: left;
 }
 
-.hits {
-  padding: 0;
-  margin: 0;
-  padding-left: 5px;
-  padding-right: 5px;
-  text-align: left;
-}
 
-.hits a {
+.novelties a {
   display: block;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
-  border-bottom: solid 1px rgb(202, 208, 206);  /*  посоветоваться!!! */
+  border-bottom: solid 1px rgb(202, 208, 206);  
 }
 
 .sub-menu a {
@@ -321,7 +332,7 @@ body {
   position: absolute;
   top: 30px;
   right: 6px;
-  width: 20px;
+  width: 100%;
   height: 10px;
 }
 
@@ -522,7 +533,7 @@ a.btn-slider {
   display: flex;
   justify-content: space-between;
   color: white;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 }
 
 .promotion h2 {
@@ -592,10 +603,6 @@ a.btn-slider {
 }
 
 
-
-
-
-
 .btn-promo {
   align-self: flex-end;
   padding: 10px 22px;
@@ -604,10 +611,10 @@ a.btn-slider {
 /* popular-items */
 
 .popular-items {
-	/* margin-bottom: 34px; */  /* если не нужно переполнение "хитов"" на главной */
+	margin-bottom: 35px;  
 }
 
-.popular-items ul,
+.hits,
 .catalog-list {
 	display: flex;
   flex-wrap: wrap;
@@ -625,14 +632,22 @@ a.btn-slider {
   position: relative;
 	max-width: 267px;
 	margin-left: 0; 
-  margin-right: 25px; 
-	margin-bottom: 34px;  /* для переполнения "хитов"" на главной */
+  margin-right: 25px;
+  margin-bottom: 35px; 
 	text-align: center;
   cursor: pointer;
 }
 
-.catalog-item:nth-child(4n) {
+.hits li:last-child {
   margin-right: 0;
+}
+
+.catalog-list li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.hits .catalog-item {
+  margin-bottom: 0;
 }
 
 .price {
@@ -807,6 +822,10 @@ a.btn-slider {
   color: black;
 }
 
+.pagination-item-current:hover {
+  background-color: white;
+}
+
 
 
 
@@ -814,11 +833,8 @@ a.btn-slider {
 
 .seo {
   color: rgb(50, 50, 50);
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 0;
-  padding-left: 20px;
-  margin-bottom: 40px;
+  padding: 25px 20px;
+  margin-bottom: 35px;
   border-radius: 15px;
   background-image: url("../img/wafer.jpg");
   background-repeat: repeat;
@@ -826,13 +842,14 @@ a.btn-slider {
 }
 
 
-.seo .seo-lead {
+p.seo-lead {
   margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   margin-bottom: 25px;
 }
+
 
 .seo-items {
   display: flex;
@@ -851,13 +868,17 @@ a.btn-slider {
   width: 540px;
 }
 
+.seo-items li:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+
 .seo-items p {
   position: relative;
   margin: 0;
   padding-left: 60px;
 }
 
-.seo-items > li p::before {
+.seo-icon::before {
   content: "";
   position: absolute;
   width: 49px;
@@ -975,7 +996,7 @@ a.btn-slider {
 
 .subscribe-form {   /* не получается сориентировать кнопку и форму по правому краю! */
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -983,9 +1004,9 @@ a.btn-slider {
   margin: 0;
 }
 
-.subscribe-form input[type="email"] {
+.subscribe-form input {
   box-sizing: border-box;
-  width: 370px;
+  width: 365px;
   padding: 14px 12px;
   margin-right: 10px;
   border: 1px solid rgb(211, 211, 210);
@@ -1151,6 +1172,311 @@ a.btn-slider {
 .close-button::after {
   transform: rotate(-45deg);
 }
+
+
+
+/* filters*/
+
+.filters {
+  margin-bottom: 35px;
+}
+
+.flex-column {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+div.flex-column:nth-child(3) {
+  margin-right: 0;
+}
+
+div.flex-column:nth-child(4) {
+  margin-bottom: 0;
+}
+
+.flex-column p {
+  margin: 0;
+}
+
+.filter label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.option-check {
+  position: relative;
+
+  padding-left: 15px;
+
+  cursor: pointer;
+}
+
+.option-check input[type="checkbox"] + 
+.checkbox-indicator {
+  position: absolute;
+  top: -2px;
+  left: -15px;
+
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid rgb(230, 235, 233);
+}
+
+.option-check input[type="checkbox"]:hover + 
+.checkbox-indicator {
+  border-color: white;
+  
+}
+
+.option-check input[type="checkbox"]:focus + 
+.checkbox-indicator {
+  border-color: white;
+  outline: thin dotted;
+  /*outline: 5px auto -webkit-focus-ring-color;*/
+}
+
+.option-check input[type="checkbox"]:checked + 
+.checkbox-indicator::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 8px;
+  height: 3px;
+  background-color: white;
+}
+
+.option-check input[type="checkbox"]:checked + 
+.checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  width: 20px;
+  height: 3px;
+  background-color: white;
+}
+
+.option-check input[type="checkbox"]:checked + 
+.checkbox-indicator::before {
+    transform: translate(-50%,-75%) rotate(45deg);
+}
+
+.option-check input[type="checkbox"]:checked + 
+.checkbox-indicator::after {
+  transform: translate(-50%,-10%) rotate(-45deg);
+}
+
+
+
+.option-radio {
+  position: relative;
+
+  padding-left: 15px;
+
+  cursor: pointer;
+}
+
+.option-radio input[type="radio"] + 
+.radio-indicator {
+  position: absolute;
+  top: -2px;
+  left: -15px;
+
+  width: 16px;
+  height: 16px;
+
+  border: 3px solid rgb(230, 235, 233);
+  border-radius: 50%;
+}
+
+
+.option-radio input[type="radio"]:hover + 
+.radio-indicator {
+  border-color: white;
+  
+}
+
+.option-radio input[type="radio"]:focus + 
+.radio-indicator {
+  border-color: white;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+
+.option-radio input[type="radio"]:checked + 
+.radio-indicator::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+
+
+.fat label,
+.fill label {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 870px;
+}
+
+.filter-input {
+  background-color: rgba(248, 247, 244, 0.2);
+  border-radius: 20px;
+}
+
+.filter-input-select {
+  padding: 7px 15px;
+  color: white;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.filter-input-select option {
+  color: black;
+}
+
+.fat,
+.fill {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fat legend,
+.fill legend {
+  margin-bottom: 15px;
+  margin-left: 15px;
+  
+}
+
+.fat-filter,
+.fill-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 9px 15px;
+}
+
+.fat-filter li,
+.fill-filter li {
+  margin-right: 15px;
+}
+
+.fat-filter li:last-child,
+.fill-filter li:last-child {
+  margin-right: 0;
+}
+
+
+.range-filter {
+  width: 220px;
+  
+}
+
+.range-controls {
+  position: relative;
+  height: 21px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  
+  border-radius: 20px;
+  background-color: rgba(248, 247, 244, 0.2);
+}
+
+.range-controls .scale {
+  height: 4px;
+  background: #d1dad3;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 4px;
+  background: #f8f7f4;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  cursor: pointer;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+  left: 40px;
+}
+
+.range-controls .toggle-max {
+  left: 140px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+
+}
+
+.price-controls label {
+  margin: 0 5px;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.price-controls input {
+  font-size: 16px;
+  width: 30px;
+  
+  padding: 0;
+  text-align: center;
+  color: white;
+  border: none;
+  background-color: rgb(132, 157, 143); 
+}
+
+.price-controls p {
+  margin: 0;
+  
+}
+
+.filter-button {
+  border: 1px solid white;
+  padding: 8px 28px;
+  color: white;
+}
+ 
 
 
 /* footer */

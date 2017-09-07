@@ -16,7 +16,7 @@
               <div class="wrapper-main-menu">
                 <a href="index.html"><img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного Глейси"></a>
                 <ul class="main-menu">
-                  <li><a href="catalog.html">Каталог</a>
+                  <li class="main-menu-current"><a href="catalog.html">Каталог</a>
                     <ul class="sub-menu">
                       <li class="hits"><a href="#">Новинки</a></li>
                       <li><a href="creamy.html">Сливочное</a></li>
@@ -51,9 +51,9 @@
                 </li>
                 <li class="login">
                   <a href="#">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
                       <polygon class="svg-fill" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959   "/>
-                      <path class="svg-fill" class="enter-icon" fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/>
+                      <path class="svg-fill" fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"/>
                     </svg>
                     <span>Вход</span>
                   </a>
@@ -82,7 +82,7 @@
                 </li> 
                 <li class="basket">
                   <a href="#">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
                       <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
                       <circle fill="#343434" cx="6.984" cy="18" r="2"/>
@@ -145,78 +145,118 @@
             <li class="breadcrumbs-current">Сливочное</li> 
           </ul>
           <h1 class="page-title">Сливочное мороженое</h1>
-          <section class="filtres">
+          <section class="filters">
             <h2 class="visually-hidden">Фильтр мороженого</h2> 
             <form class="filter" action="test.php" method="get">
+              <div class="flex-column">
               <label for="sorting">Сортировка:</label>
-                <p>   <!--зачем в select добавлять visually-hidden??? -->
+                <p>
                   <select class="filter-input filter-input-select" id="sorting" name="sorting" value="по популярности">
-                    <option value="sorting-popular">по популярности</option>
-                    <option value="sorting-cheap">сначала недорогие</option>
-                    <option value="sorting-expensive">сначала дорогие</option>
-                    <option value="sorting-fat">по жирности</option>
+                     <option value="sorting-popular">по популярности</option>
+                     <option value="sorting-cheap">сначала недорогие</option>
+                     <option value="sorting-expensive">сначала дорогие</option>
+                     <option value="sorting-fat">по жирности</option>
                   </select>
-                </p>  
-              <label for="price-filter">Цена: 100 руб. – 500 руб.</label>  
-                <p> <!--зачем в input добавлять visually-hidden??? -->
-                  <input class="filter-input filter-input-range" type="range" id="price-filter" name="price-range" min="0" max="500" multiple> <!-- слайдер с двумя ползунками??-->
-                </p>
-              <fieldset>
+               </p>
+             </div>
+             <div class="flex-column"> 
+              <div class="range-filter">
+                <div class="price-controls">
+                  <span>Цена:</span>
+                  <label class="min-price">
+                  <input name="min-price" type="text" value="100"></label>
+                  <span>руб. –</span>
+                  <label class="max-price">
+                  <input name="max-price" type="text" value="500"></label>
+                  <span>руб.</span>
+                </div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="margin-left: 30px; width: 60%;"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-column">
+              <fieldset class="fat">
                 <legend>Жирность:</legend>
-                <ul>
-                  <li class="filter-option" >
-                    <label> <!--зачем в input добавлять visually-hidden??? -->
-                      <input class="filter-input filter-input-radio" type="radio" name="fat" value="0%">0%
+                <ul class="fat-filter filter-input">
+                  <li>
+                    <label class="option-radio" >
+                      <input class="visually-hidden" type="radio" name="fat" value="0%">
+                      <span class="radio-indicator"></span>
+                      0%
                     </label>
                   </li>
-                  <li class="filter-option">
-                    <label>
-                      <input class="filter-input filter-input-radio" type="radio" name="fat" value="to-10%" checked>до 10%
+                  <li>
+                    <label class="option-radio">
+                      <input class="visually-hidden" type="radio" name="fat" value="to-10%" checked>
+                      <span class="radio-indicator"></span>
+                      до 10%
                     </label>
                   </li>    
-                  <li class="filter-option">
-                    <label>
-                      <input class="filter-input filter-input-radio" type="radio" name="fat" value="to-30%">до 30%
+                  <li>
+                    <label class="option-radio">
+                      <input class="visually-hidden" type="radio" name="fat" value="to-30%">
+                      <span class="radio-indicator"></span>
+                      до 30%
                     </label>
                   </li> 
-                  <li class="filter-option">
-                    <label>
-                      <input class="filter-input filter-input-radio" type="radio" name="fat" value="above-30%">выше 30%
-                    </label>
-                  </li>
-                </ul> 
-              </fieldset>
-              <fieldset>
-                <legend>Наполнители:</legend>
-                <ul>
-                  <li class="filter-option">
-                    <label>  <!--зачем в input добавлять visually-hidden??? -->
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="chokolate" checked>шоколадные
-                    </label>
-                  </li>
-                  <li class="filter-option">
-                    <label>
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="sugar-powder" checked>сахарные присыпки
-                    </label>
-                  </li>
-                  <li class="filter-option">
-                    <label>
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="fruits">фрукты
-                    </label>
-                  </li>  
-                  <li class="filter-option">
-                    <label>
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="syrups">сиропы
-                    </label>
-                  </li>
-                  <li class="filter-option">
-                    <label>
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="jams">джемы
+                  <li>
+                    <label class="option-radio">
+                      <input class="visually-hidden" type="radio" name="fat" value="above-30%">
+                      <span class="radio-indicator"></span>
+                      выше 30%
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <button class="filter-button" type="submit">Применить</button>
+            </div>
+            <div class="flex-column">
+              <fieldset class="fill">
+                <legend>Наполнители:</legend>
+                <ul class="fill-filter filter-input">
+                  <li>
+                    <label class="option-check">
+                      <input class="visually-hidden" type="checkbox" name="chokolate" checked>
+                      <span class="checkbox-indicator"></span>
+                      шоколадные
+                    </label>
+                  </li>
+                  <li>
+                    <label class="option-check">
+                      <input class="visually-hidden" type="checkbox" name="sugar-powder" checked>
+                      <span class="checkbox-indicator"></span>
+                      сахарные присыпки
+                    </label>
+                  </li>
+                  <li>
+                    <label class="option-check">  
+                      <input class="visually-hidden" type="checkbox" name="fruits">
+                      <span class="checkbox-indicator"></span>
+                      фрукты
+                    </label>
+                  </li>  
+                  <li>
+                    <label class="option-check">
+                      <input class="visually-hidden" type="checkbox" name="syrups">
+                      <span class="checkbox-indicator"></span>
+                      сиропы
+                    </label>
+                  </li>
+                  <li>
+                    <label class="option-check">
+                      <input class="visually-hidden" type="checkbox" name="jams">
+                      <span class="checkbox-indicator"></span>
+                      джемы
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <button class="filter-button filter-input" type="submit">Применить</button>
             </form>
           </section>
           <section class="catalog">
@@ -322,7 +362,7 @@
               <li class="pagination-item pagination-prev">
                 <a href="#prev">
                   <span class="visually-hidden">Назад</span>
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
                       <path class="icon-left" fill="#ffffff" d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15
                       c-0.198,0.198-0.198,0.519,0,0.717c0.099,0.099,0.229,0.148,0.358,0.148c0.129,0,0.259-0.05,0.358-0.148l5.509-5.509
@@ -338,7 +378,7 @@
               <li class="pagination-item pagination-next">
                 <a href="#next">
                   <span class="visually-hidden">Вперед</span>
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
                       <path class="icon-right" fill="#ffffff" d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15
                       c-0.198,0.198-0.198,0.519,0,0.717c0.099,0.099,0.229,0.148,0.358,0.148c0.129,0,0.259-0.05,0.358-0.148l5.509-5.509
@@ -368,7 +408,7 @@
                 </li>
                 <li>
                   <a class="social-button" href="#">
-                    <svg class="social-fill" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg class="social-fill" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                       <g>
                       <path class="social-fill" fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
@@ -385,7 +425,7 @@
                 </li>
                 <li>
                   <a class="social-button" href="#">
-                    <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg  version="1.1"  xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                       width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                       <path class="social-fill" fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
                       v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
@@ -394,7 +434,7 @@
                 </li>
                 <li>
                   <a class="social-button" href="#">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                     <g>
                     <path class="social-fill" fill="#FFFFFF" d="M16.637,14.495c0.402-0.019,0.719-0.082,0.951-0.188c0.326-0.145,0.54-0.33,0.641-0.559
