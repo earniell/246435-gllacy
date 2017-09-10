@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="site-wrapper">
-      <div class="content-wrapper">
+      <div class="wrapper">
         <header class="page-header">
           <nav class="main-nav">
             <div class="wrapper-main-nav">
@@ -74,14 +74,14 @@
                             <button class="btn button-login">Войти</button>
                           </p>
                           <ul class="restore">
-                            <li><a href="#">Забыли пароль?</a></li>
-                            <li><a href="#">Новая регистрация</a></li>
+                            <li><a class="restore-link" href="#">Забыли пароль?</a></li>
+                            <li><a class="restore-link" href="#">Новая регистрация</a></li>
                           </ul>
                         </div>
                       </form>
                     </section>
                 </li> 
-                <li class="basket">
+                <li class="basket basket-active">
                   <a href="#">
                     <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
@@ -233,9 +233,7 @@
                   <li>
                     <label class="option-check">
                       <input class="visually-hidden" type="checkbox" name="chokolate" checked>
-                      <span class="checkbox-indicator">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path fill="#FFFFFF" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#FFFFFF" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/></svg>
-                      </span>
+                      <span class="checkbox-indicator"></span>
                       шоколадные
                     </label>
                   </li>
@@ -281,6 +279,9 @@
                   <span class="price">310 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
               <li class="catalog-item">
                 
@@ -288,6 +289,9 @@
                   <span class="price">380 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочно-кофейное с кусочками шоколада</a>  
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>  
               <li class="catalog-item">
                 
@@ -295,6 +299,9 @@
                   <span class="price">355 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>      
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
               <li class="catalog-item">
                 
@@ -302,6 +309,9 @@
                   <span class="price">415 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
               <li class="catalog-item">
                 
@@ -309,6 +319,9 @@
                   <span class="price">325 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href=""> Сливочное с брусничныс джемом</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
               <li class="catalog-item">
                 
@@ -316,6 +329,9 @@
                   <span class="price">410 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>  
               <li class="catalog-item">
                 
@@ -323,6 +339,9 @@
                   <span class="price">375 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
               <li class="catalog-item">
                 
@@ -330,6 +349,9 @@
                   <span class="price">320 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочное с шоколадной стружкой</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
               <li class="catalog-item">
                 
@@ -337,6 +359,9 @@
                   <span class="price">440 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
               <li class="catalog-item">
                 
@@ -344,6 +369,9 @@
                   <span class="price">435 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочное с ментоловым сиропом</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>  
               <li class="catalog-item">
                 
@@ -351,6 +379,9 @@
                   <span class="price">375 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочное с кусочками черного шоколада</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
               <li class="catalog-item">
                 
@@ -358,6 +389,9 @@
                   <span class="price">420 ₽</span>
                   <span class="weight">/кг</span> 
                   <a href="#">Сливочное с мятным сиропом</a>
+                  <div class="product-review">
+                    <button class="btn button-product-view" type="button">Быстрый просмотр</button>
+                  </div>
               </li>
             </ul>
             <ul class="pagination-list">

@@ -9,29 +9,32 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
+    <input type="radio" id="btn-3" name="toggle">
     <div class="site-wrapper">
-      
+      <div class="wrapper">
         <header class="page-header">
-        	<nav class="main-nav">
-        		<div class="wrapper-main-nav">
+          <nav class="main-nav">
+            <div class="wrapper-main-nav">
               <div class="wrapper-main-menu">
-                <a href="#"><img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного Глейси"></a>
-            		<ul class="main-menu">
+                <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженного Глейси">
+                <ul class="main-menu">
                   <li><a href="#">Каталог</a>
-            			  <ul class="sub-menu">
-            					<li class="novelties"><a href="#">Новинки</a></li>
-            					<li><a href="creamy.html">Сливочное</a></li>
-            					<li><a href="#">Щербеты</a></li>
-            					<li><a href="#">Фруктовый лед</a></li>
-            					<li><a href="#">Мелорин</a></li>
-            		    </ul>
-            			</li>
-            			<li><a href="#">Доставка и оплата</a></li>
-            			<li><a href="#">О Компании</a></li>
-            		</ul>
+                    <ul class="sub-menu">
+                      <li class="novelties"><a href="#">Новинки</a></li>
+                      <li><a href="creamy.html">Сливочное</a></li>
+                      <li><a href="#">Щербеты</a></li>
+                      <li><a href="#">Фруктовый лед</a></li>
+                      <li><a href="#">Мелорин</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Доставка и оплата</a></li>
+                  <li><a href="#">О Компании</a></li>
+                </ul>
               </div>  
-            	<ul class="user-nav">
-            		<li class="search">
+              <ul class="user-nav">
+                <li class="search">
                   <a href="#">
                     <svg class="loupe-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
                       height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
@@ -50,7 +53,7 @@
                     </form>
                   </section>
                 </li>
-         			  <li class="login">
+                <li class="login">
                   <a href="#">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
                       <polygon class="svg-fill" fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959   "/>
@@ -74,8 +77,8 @@
                             <button class="btn button-login">Войти</button>
                           </p>
                           <ul class="restore">
-                            <li><a href="#">Забыли пароль?</a></li>
-                            <li><a href="#">Новая регистрация</a></li>
+                            <li><a class="restore-link" href="#">Забыли пароль?</a></li>
+                            <li><a class="restore-link" href="#">Новая регистрация</a></li>
                           </ul>
                         </div>
                       </form>
@@ -92,7 +95,7 @@
                     <span>Пусто</span>
                   </a>
                 </li>
-          		</ul>
+              </ul>
             </div>
             <div class="header-info">  
                 <p>с 10 до 20, ежедневно</p>
@@ -101,49 +104,26 @@
           </nav>
         </header>
         <main class="container">
-        	<section class="slider-section">
-            <div class="slider-toggle">
-              <input  type="radio" id="slider-toggle-1" name="toggle" checked>
-              <input  type="radio" id="slider-toggle-2" name="toggle">
-              <input  type="radio" id="slider-toggle-3" name="toggle">
+          <div class="slider">
+            <div class="slide" id="slide1">
+              <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+              <a class="slide-btn" href="#">Давайте оба!</a>
             </div>
-            <h2 class="visually-hidden">Слайдер</h2>
-        		<ul class="slider">
-        		  <li class="slider-image" id="slide-1">
-                <img src="img/slider-01.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
-                <p>Крем-брюле и пломбир с малиновым джемом</p>
-                <a class="btn btn-slider" href="#">Давайте оба!</a>
-              </li>
-              <li class="slider-image" id="slide-2">
-                <img src="img/slider-02.png" width="647" height="584" alt="Шоколадный пломбир и лимонный сорбет">
-                <p>Шоколадный пломбир и лимонный сорбет</p>
-                <a class="btn btn-slider" href="#">Давайте оба!</a>
-              </li>	
-              <li class="slider-image" id="slide-3">
-                <img src="img/slider-03.png" width="647" height="584" alt="Пломбир с помадкой и клубничный щербет">
-                <p>Пломбир с помадкой и клубничный щербет</p>
-                <a class="btn btn-slider" href="#">Давайте оба!</a>
-              </li> 
-        		</ul>
-            <ul class="slider-controls">
-              <li>
-                <label for="slider-toggle-1">
-                  <span class="visually-hidden">1 слайд</span>
-                </label>
-              </li>
-              <li>
-                <label for="slider-toggle-2">
-                  <span class="visually-hidden">2 слайд</span>
-                </label>
-              </li>
-              <li>
-                <label for="slider-toggle-3">
-                  <span class="visually-hidden">3 слайд</span>
-                </label>
-              </li>
-            </ul>
-          </section>
-        	<section class="promotion">
+            <div class="slide" id="slide2">
+              <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+              <a class="slide-btn" href="#">Давайте оба!</a>
+            </div>
+            <div class="slide" id="slide3">
+              <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+              <a class="slide-btn" href="#">Давайте оба!</a>
+            </div>
+            <div class="slider-controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+              <label for="btn-3"></label>
+            </div>
+          </div>
+          <section class="promotion">
             <h2 class="visually-hidden">Акции</h2>
             <article class="left-promo">
               <h2>Малинка даром!</h2>
@@ -204,7 +184,7 @@
               </li>
             </ul> 
           </section>
-        	<section class="seo"> 
+          <section class="seo"> 
             <h2 class="visually-hidden">Наши преимущества</h2>
             <p class="seo-lead">
               Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
@@ -244,15 +224,16 @@
                 <p>
                   <button class="btn button-subscribe" type="submit">Отправить</button>
                 </p>
-             </form> 
+             </form>
             </article>
           </div>
         </main>
+        </div>
           <section class="contacts">
             <h2 class="visually-hidden">Контакты и карта</h2>
             <article class="map">
               <h2 class="visually-hidden">Карта</h2>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="1200" height="429" allowfullscreen></iframe>
+              <iframe src="https://goo.gl/UG1Ff1" allowfullscreen></iframe>
               <img src="img/map.png" width="1200" height="429" alt="карта с адресом магазина ул. Большая Конюшенная 19/8">
             </article>
             <article class="feedback">
@@ -269,7 +250,8 @@
               <button class="btn button-feedback-1">Форма обратной связи</button>
             </article>
           </section>
-          <footer class="page-footer">
+          <div class="wrapper">
+            <footer class="page-footer">
             <section class="footer-social">
               <h2 class="visually-hidden">Мы в соц. сетях</h2>
               <ul>
@@ -360,21 +342,22 @@
               <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017 </p>
             </section>  
           </footer>
+          </div>
           <section class="modal modal-feedback">
                 <h2 class="visually-hidden">Обратная связь</h2>
                 <form class="feedback-form" action="test.php" method="post">
                   <p><b>Мы обязательно вам ответим!</b></p>
                   <p>
                     <label class="visually-hidden" for="feedback-name">Имя</label>             
-                    <input id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?"> 
+                    <input id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?" required> 
                   </p>
                   <p>
                     <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-                    <input id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?"> 
+                    <input id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required> 
                   </p>
                   <p>
                     <label class="visually-hidden" for="message">Отзыв</label>
-                    <textarea id="message" name="feedback-message" rows="5" cols="49" placeholder="Напишите что-нибудь..." ></textarea>    
+                    <textarea id="message" name="feedback-message" rows="5" cols="49" placeholder="Напишите что-нибудь..." required></textarea>    
                   </p>
                   <p>
                     <button class="btn button-feedback-2" type="submit">Отправить</button>
@@ -382,57 +365,7 @@
                 </form>
                 <button class="close-button" type="button">Закрыть</button>  
               </section>
-        
       </div>
-      <script>
-
-var link = document.querySelector(".button-feedback-1");
-var popup = document.querySelector(".modal-feedback");
-var close = popup.querySelector(".close-button");
-var name = popup.querySelector("[name=feedback-name]");
-var form = popup.querySelector("form");
-var email = popup.querySelector("[name=feedback-email]");
-var message = popup.querySelector("[name=feedback-message]");
-var storage = localStorage.getItem("name");
-
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
-  if (storage) {
-      name.value = storage;
-      email.focus();
-    } else {
-      name.focus();
-    }
-
-});
-
-close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
-    name.focus();
-  });
-
-form.addEventListener("submit", function (evt) {
-    if (!name.value || !email.value || !message.value) {
-      evt.preventDefault();
-      popup.classList.remove("modal-error");
-      popup.offsetWidth = popup.offsetWidth;
-      popup.classList.add("modal-error");
-    } else {
-      localStorage.setItem("name", name.value);
-    }
-  });
-
-window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      if (popup.classList.contains("modal-show")) {
-        popup.classList.remove("modal-show");
-        popup.classList.remove("modal-error");
-      }
-    }
-  });
-</script>
+      <script src="js/script.js"></script>
     </body>
 </html>
