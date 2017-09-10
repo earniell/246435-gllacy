@@ -1491,6 +1491,8 @@ div.flex-column:nth-child(4) {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .select-container {
