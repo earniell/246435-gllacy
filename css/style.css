@@ -1,28 +1,36 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: white;
   background-color: rgb(132, 157, 143);
-  
 }
 
 body > input {
   display: none;
 }
 
+.site-wrapper {
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
 .fixed {
   overflow: hidden;
 }
 
-.wrapper {
-  width: 1146px;
-  padding: 0 2.3%;
+.center {
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 0 2.3%;
   position: relative;
 }
 
@@ -55,7 +63,6 @@ body > input {
 
 .wrapper-main-nav {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   min-height: 75px;
@@ -66,7 +73,7 @@ body > input {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  width: 580px;
+  width: 583px;
 }
 
 .header-info {
@@ -120,8 +127,8 @@ body > input {
 
 .main-menu li {
   position: relative;
-  margin-right: 15px;
-  padding: 7px 12px;
+  margin-right: 5px;
+  padding: 6px 12px;
 }
 
 .main-menu li::after {
@@ -235,8 +242,7 @@ body > input {
 }
 
 .user-nav li {
-  margin-right: 10px;
-  
+  margin-right: 7px;
 }
 
 .user-nav li:last-child {
@@ -368,7 +374,6 @@ body > input {
 
 .login-form {
   padding: 20px;
-
 }
 
 .login-form p {
@@ -500,7 +505,7 @@ a.btn-slider {
 
 .slider-controls {
   position: absolute;
-  bottom: 25px;
+  bottom: 20px;
   left: 0;
   z-index: 20;
   font-size: 0;
@@ -511,9 +516,7 @@ a.btn-slider {
   width: 17px;
   height: 17px;
   margin-right: 8px;
-
   vertical-align: top;
-
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -573,7 +576,7 @@ a.btn-slider {
 .promotion h2 {
   margin: 0;
   padding: 0;
-  margin-bottom: 19px;
+  margin-bottom: 17px;
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
@@ -581,7 +584,7 @@ a.btn-slider {
 
 .promotion p {
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 44px;
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
@@ -590,9 +593,10 @@ a.btn-slider {
 .left-promo {         
   display: flex;
   flex-direction: column;
-  width: 519px;
-  border-radius: 20px;
-  padding: 23px 21px 20px 20px;
+  width: 520px;
+  border-radius: 15px;
+  margin-right: 26px;
+  padding: 17px 20px 24px 18px;
   background-image: url("../img/raspberry.jpg");
   background-size: cover;
   background-color: #792d44;
@@ -601,9 +605,9 @@ a.btn-slider {
 .right-promo {        
   display: flex;
   flex-direction: column;
-  width: 519px;
-  border-radius: 20px;
-  padding: 23px 21px 20px 20px;
+  width: 520px;
+  border-radius: 15px;
+  padding: 17px 20px 24px 18px;
   background-image: url("../img/chokolate.jpg");
   background-size: cover;
   background-color: #64381d;
@@ -650,7 +654,7 @@ a.btn-slider {
 
 .catalog {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .catalog::after {
@@ -674,7 +678,7 @@ a.btn-slider {
 }
 
 .catalog-list {
-  margin-bottom: 70px;
+  margin-bottom: 84px;
 }
 
 .catalog-item {
@@ -710,19 +714,19 @@ a.btn-slider {
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
   color: white;
   position: absolute;
-  top: 200px;
+  top: 210px;
   left: 0;
 }
 
 .weight {
-  font-size: 35px;
+  font-size: 30px;
   line-height: 45px;
   font-weight: 700;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
   color: white;
   position: absolute;
-  top: 204px;
-  left: 120px;
+  top: 215px;
+  left: 113px;
 }
 
 .hit-icon {
@@ -734,7 +738,7 @@ a.btn-slider {
 }
 
 .catalog-item img {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .catalog-item p {
@@ -791,7 +795,8 @@ a.btn-slider {
 .breadcrumbs {
   position: relative;
   margin: 0;
-  margin-bottom: 10px;
+  margin-top: -21px;
+  margin-bottom: 5px;
   padding: 0;
   list-style: none;
   display: flex;
@@ -853,7 +858,7 @@ a.btn-slider {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
 }
 
 
@@ -863,7 +868,7 @@ a.btn-slider {
   align-items: center;
   width: 27px;
   height: 27px;
-  margin-right: 3px;
+  margin-right: 1px;
   border-radius: 50%;
 }
 
@@ -922,7 +927,7 @@ a.btn-slider {
 
 .seo {
   color: rgb(50, 50, 50);
-  padding: 25px 20px;
+  padding: 22px 24px 25px 18px;
   margin-bottom: 40px;
   border-radius: 15px;
   background-image: url("../img/wafer.jpg");
@@ -997,7 +1002,7 @@ p.seo-lead {
 
 .wrapper-news {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 40px;
 }
 
@@ -1006,17 +1011,18 @@ p.seo-lead {
 	color: rgb(50, 50, 50);
 	width: 560px;
   min-height: 220px;
-	padding: 25px 20px;
+	padding: 21px 18px;
 	border-radius: 15px;
 	background-image: url("../img/strawberry.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
+  margin-right: 26px;
 }
 
 .news h3 {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -1048,9 +1054,9 @@ p.seo-lead {
   box-sizing: border-box;
   position: relative;
   color: rgb(50, 50, 50);
-  width: 550px;
+  width: 560px;
   min-height: 215px;
-  padding: 25px 20px;
+  padding: 33px 20px 25px 27px;
   border-radius: 15px;
   background-image: url("../img/subscribe-bg.png"); 
   background-repeat: no-repeat;
@@ -1062,7 +1068,7 @@ p.seo-lead {
 .subscribe-text {
   width: 510px;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
@@ -1071,7 +1077,8 @@ p.seo-lead {
 
 .subscribe-form {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -1083,41 +1090,49 @@ p.seo-lead {
   box-sizing: border-box;
   width: 365px;
   padding: 14px 12px;
-  margin-right: 10px;
+  margin-right: 12px;
   border: 1px solid rgb(211, 211, 210);
   border-radius: 6px;
 } 
 
 .button-subscribe {
-  padding: 10px 19px;
+  padding: 10px 16px;
   border: none;
 } 
 
 /* contacts */
 
 .contacts {
- /* position: relative;*/
+  position: relative;
+}
+
+.contacts iframe {
+  position: absolute;
+  border: 0;
+  height: 430px;
+  width: 100%;
+  z-index: 1;
+}
+
+.map-wrapper {
+  width: 1200px;
+  min-height: 430px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .map {
   background-color: #cee0c0;
 }
 
-.map iframe {
-  position: absolute;
-  border: 0;
-  height: 429px;
-  width: 100%;
-}
-
 .feedback {
   position: absolute;
-  top: 47px;
-  right: 29px;
-  padding: 30px 25px;
+  top: 62px;
+  right: 27px;
+  padding: 28px 15px 32px 25px;
   background-color: rgb(255, 255, 255);
   border-radius: 15px;
-  color: rgb(50, 50, 50); 
+  color: rgb(50, 50, 50);
   z-index: 1;
 }
 
@@ -1125,7 +1140,7 @@ p.seo-lead {
 
 .adress {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 19px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -1133,7 +1148,7 @@ p.seo-lead {
 
 .phone {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -1147,7 +1162,7 @@ p.seo-lead {
 
 .phone b {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 28px;
   font-weight: 700;
 }
 
@@ -1203,13 +1218,13 @@ p.seo-lead {
 
 .feedback-form input {
   width: 230px;
-  height: 10px;
+  height: 20px;
   border: solid 1px rgb(211, 211, 210);
   border-radius: 6px;
-  padding: 15px;
+  padding: 9px 14px;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400px;
+  font-weight: 400;
 }
 
 .feedback-form textarea {
@@ -1259,7 +1274,7 @@ p.seo-lead {
 /* filters*/
 
 .filters {
-  margin-bottom: 40px;
+  margin-bottom: 21px;
 }
 
 .flex-column {
@@ -1420,9 +1435,9 @@ div.flex-column:last-child {
 
 .filter-input-select {
   font: inherit;
-  padding-top: 7px;
+  padding-top: 9px;
   padding-right: 30px;
-  padding-bottom: 7px;
+  padding-bottom: 9px;
   padding-left: 15px;
   color: white;
   font-size: 16px;
@@ -1480,11 +1495,12 @@ div.flex-column:last-child {
 .fat legend,
 .fill legend,
 .sorting legend {
-  margin-bottom: 15px;
+  margin-bottom: 7px;
   margin-left: 15px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  display: block;
 }
 
 .fat-filter {
@@ -1556,11 +1572,11 @@ div.flex-column:last-child {
 }
 
 .range-controls .toggle-min {
-  left: 40px;
+  left: 37px;
 }
 
 .range-controls .toggle-max {
-  left: 140px;
+  left: 135px;
 }
 
 
@@ -1570,17 +1586,11 @@ div.flex-column:last-child {
 }
 
 .price-controls {
-  display: flex;
-  justify-content: flex-start;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
   margin-left: 15px;
-  margin-bottom: 15px;
-}
-
-.price-controls label {
-  margin: 0 5px;
+  margin-bottom: 9px;
 }
 
 .max-price {
@@ -1599,6 +1609,8 @@ div.flex-column:last-child {
 
 .price-controls p {
   margin: 0;
+  margin-bottom: 10px;
+  margin-top: 4px;
 }
 
 .filter-button {
@@ -1632,7 +1644,8 @@ div.flex-column:last-child {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  min-height: 90px;
+  /*min-height: 90px;*/
+  padding: 14px 0;
 }
 
 .page-footer a:hover,
@@ -1652,7 +1665,7 @@ div.flex-column:last-child {
 }
 
 .footer-social li {
-  margin-right: 14px;
+  margin-right: 11px;
 }
 
 .footer-social li:last-child {
@@ -1672,16 +1685,16 @@ div.flex-column:last-child {
   fill: rgb(230, 235, 233);
 }
 
-.social-button:hover {
-  border-color: rgb(218, 226, 222)
+.footer-social .social-button:hover {
+  border-color: rgb(218, 226, 222);
 }
 
 .social-button:hover .social-fill {
   fill: white;
 }
 
-.social-button:active {
-  border-color: rgb(218, 226, 222)
+.footer-social .social-button:active {
+  border-color: rgb(218, 226, 222);
 } 
 
 .social-button:active .social-fill {
@@ -1695,7 +1708,7 @@ div.flex-column:last-child {
   justify-content: flex-start;
   align-items: center;
   width: 310px;
-  min-height: 40px;
+ /* min-height: 40px;*/
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1708,11 +1721,11 @@ div.flex-column:last-child {
 }
 
 .service-info {
-  margin-right: 30px;
+  margin-right: 32px;
 }
 
 .service-list li:nth-child(3) {
-  margin-right: 42px;
+  margin-right: 44px;
 }
 
 
@@ -1774,6 +1787,7 @@ div.flex-column:last-child {
 
 .modal-show {
   display: block;
+  z-index: 2;
 }
 
 
