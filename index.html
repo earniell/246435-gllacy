@@ -6,7 +6,7 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" >
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <input type="radio" id="btn-1" name="toggle" checked>
@@ -240,7 +240,7 @@
         <div class="map-wrapper">
           <article class="map">
             <h2 class="visually-hidden">Карта</h2>
-              <img src="img/map.png" width="1200" height="430" alt="карта с адресом магазина ул. Большая Конюшенная 19/8">
+              <img src="img/map.png" width="1200" height="425" alt="карта с адресом магазина ул. Большая Конюшенная 19/8">
           </article>
           <article class="feedback">
               <h2 class="visually-hidden">Адрес и телефон</h2>
@@ -253,9 +253,9 @@
                 <b>8 812 450-25-25</b><br>
                 <span>(с 10 до 20 ежедневно)</span>
               </p>
-              <button class="btn button-feedback-1">
+              <a class="btn button-feedback-1" href="#feedback-form">
                 Форма обратной связи
-              </button>
+              </a>
             </article>
           </div>
       </section>
@@ -353,21 +353,22 @@
             </section>  
           </footer>
           </div>
+          <div class="blur"></div>
           <section class="modal modal-feedback">
             <h2 class="visually-hidden">Обратная связь</h2>
             <form class="feedback-form" action="test.php" method="post">
               <p><b>Мы обязательно вам ответим!</b></p>
               <p>
                 <label class="visually-hidden" for="feedback-name">Имя</label>             
-                <input id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?" required> 
+                <input id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?" > 
               </p>
               <p>
                 <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-                <input id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required> 
+                <input id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?"> 
               </p>
               <p>
                 <label class="visually-hidden" for="message">Отзыв</label>
-                <textarea id="message" name="feedback-message" rows="5" cols="49" placeholder="Напишите что-нибудь..." required></textarea> 
+                <textarea id="message" name="feedback-message" rows="5" cols="49" placeholder="Напишите что-нибудь..." ></textarea> 
               </p>
               <p>
                 <button class="btn button-feedback-2" type="submit">Отправить</button>
@@ -377,6 +378,6 @@
           </section>
         </div> <!-- wrapper -->
       </div>  <!-- center -->
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
